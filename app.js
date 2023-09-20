@@ -8,7 +8,7 @@ app.use('/sketches', express.static(path.join(__dirname, 'sketches')));
 
 app.get('/sketch/:id', (req, res) => {
   const sketchId = req.params.id;
-  res.sendFile(path.join(__dirname, `sketches/sketch${sketchId}.js`));
+  res.sendFile(path.join(__dirname, `sketches/day${sketchId}.js`));
 });
 
 app.listen(PORT, () => {
